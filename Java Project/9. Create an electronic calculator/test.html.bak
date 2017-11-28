@@ -1,0 +1,11 @@
+
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+</HEAD>
+
+<BODY>
+<APPLET CODE = "버튼액션_01.class" WIDTH = 800 HEIGHT = 500 >
+</APPLET>
+</BODY>
+</HTML>

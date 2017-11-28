@@ -1,0 +1,35 @@
+import java.io.* ;
+import java.applet.* ;
+import java.awt.* ;
+import java.awt.event.* ;
+
+public class 버튼액션_01 extends Applet 
+{
+	TextField 문자입력 ;
+	Button 내버튼 ;
+	Panel 패널 ;
+	Label  레이블 ;
+
+	public void init( ) {
+		패널 = new Panel( ) ;
+		패널.setLayout(new GridLayout(2,1)) ;
+		내버튼 = new Button("이름을 입력하고 클릭하세요.") ;
+		문자입력 = new TextField(20) ;
+
+		패널.add(문자입력) ;
+		패널.add(내버튼) ;
+		setLayout(new BorderLayout( ));
+
+		레이블 = new Label(" ",Label.CENTER);
+		add("North", 패널); add("Center",레이블) ;
+		
+		내버튼.addActionListener ( new ActionListener( ) {
+			public void actionPerformed ( ActionEvent e) {
+				repaint( ) ;
+			}
+		}); 
+	}
+		public void paint( Graphics 화가) {
+			레이블.setText(문자입력.getText( ) + " 씨 안녕하세요. ") ;
+		}
+};  
